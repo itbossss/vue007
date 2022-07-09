@@ -1,20 +1,45 @@
 <template>
   <div class="my-tab-bar">
-    <div class="tab-item">
+    <div
+      class="tab-item"
+      :class="{ current: isCurrent == index }"
+      v-for="(item, index) in tabList"
+      :key="index"
+      @click="clickFn(index)"
+    >
       <!-- 图标 -->
-      <span class="iconfont"></span>
+      <span class="iconfont" :class="item.iconText"></span>
       <!-- 文字 -->
-      <span></span>
+      <span> {{ item.text }}</span>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  data() {
+    return {
+      isCurrent: 0,
+    };
+  },
+  computed: {
+    ...mapState(["tabList"]),
+  },
+  created() {
+    console.log(this.$store);
+  },
+  methods: {
+    clickFn(index) {
+      this.isCurrent = index;
+    },
+  },
+};
 </script>
 
 <style lang="less" scoped>
 .my-tab-bar {
+  cursor: pointer;
   position: fixed;
   left: 0;
   bottom: 0;

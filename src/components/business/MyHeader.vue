@@ -1,25 +1,9 @@
 <template>
-  <div class="my-header" :style="{ background: backgroundColor, color }">
-    {{ title }}
-  </div>
+  <div class="my-header">tabbar</div>
 </template>
 
 <script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    backgroundColor: {
-      type: String,
-    },
-    color: {
-      type: String,
-      default: "#fff",
-    },
-  },
-};
+export default {};
 </script>
 
 <style lang="less" scoped>
