@@ -2,47 +2,53 @@ import Vue from 'vue'
 
 import VueRouter from 'vue-router'
 
-import MyHome from '@/views/MyHome.vue'
-import MyNews from '@/views/MyNews.vue'
-import MySports from '@/views/MySports.vue'
-import MySports1 from '@/views/MySports1.vue'
-import MySports2 from '@/views/MySports2.vue'
-import MySports3 from '@/views/MySports3.vue'
+import UI_Router from '@/views/UI_Router.vue'
+import Contacts from '@/views/Contacts.vue'
+import About from '@/views/About.vue'
+
+import Allcontacts from '../components/All_contacts.vue'
+import Alice from '../components/Alice.vue'
+import Bob from '../components/Bob.vue'
+import Blog from '../components/Blog.vue'
+import fax from '../components/fax.vue'
 
 const routes = [
   {
     path: '/',
-    redirect: '/home',
+    redirect: '/router',
   },
   {
-    path: '/home',
-    component: MyHome,
+    path: '/router',
+    component: UI_Router,
   },
   {
-    path: '/news',
-    component: MyNews,
-  },
-  {
-    path: '/sports',
-    component: MySports,
+    path: '/contacts',
+    component: Contacts,
     children: [
+      { path: 'allcontacts', component: Allcontacts },
+      { path: 'alice', component: Alice },
       {
-        path: 'sports1',
-        component: MySports1,
-      },
-      {
-        path: 'sports2',
-        component: MySports2,
-      },
-      {
-        path: 'sports3',
-        component: MySports3,
+        path: 'bob',
+        component: Bob,
+        children: [
+          { path: 'blog', component: Blog },
+          { path: 'fax', component: fax },
+        ],
       },
     ],
+  },
+  {
+    path: '/about',
+    component: About,
   },
 ]
 
 Vue.use(VueRouter)
+
+let routerPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return routerPush.call(this, location).catch((err) => err)
+}
 
 const router = new VueRouter({
   routes,

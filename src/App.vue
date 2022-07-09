@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h2>嵌套路由</h2>
+    <h2>三级路由嵌套</h2>
     <div>
-      <router-link to="/home">主页</router-link>
-      <router-link to="/news">新闻</router-link>
-      <router-link to="/sports">体育</router-link>
+      <router-link to="/router">UI_Router</router-link>
+      <router-link to="/contacts">Contacts</router-link>
+      <router-link to="/about">About</router-link>
     </div>
-
+    <hr />
     <div><router-view></router-view></div>
   </div>
 </template>

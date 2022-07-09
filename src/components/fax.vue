@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>我的新闻</h3>
+    <h5>fax</h5>
   </div>
 </template>
 

@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h4>国外的体育</h4>
-  </div>
+  <div>My-About</div>
 </template>
 
 <script>

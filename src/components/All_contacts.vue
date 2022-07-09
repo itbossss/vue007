@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h4>体育的主页</h4>
-  </div>
+  <h4>My-All_contacts</h4>
 </template>
 
 <script>

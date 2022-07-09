@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>我的主页</h3>
+    <h5>Blog</h5>
   </div>
 </template>
 
