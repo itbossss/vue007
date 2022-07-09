@@ -1,9 +1,11 @@
 <template>
   <div>
     <div class="FirstBox">
-      <router-link to="/UlRouter">UlRouter</router-link>
-      <router-link to="/Contacts">Contacts</router-link>
-      <router-link to="/About">About</router-link>
+      <h1>一级路由</h1>
+      <router-link to="/HomePage">首页</router-link>
+      <router-link to="/classification">分类</router-link>
+      <router-link to="/TheOrder">订单</router-link>
+      <router-link to="/My">我的</router-link>
     </div>
     <div>
       <router-view></router-view>
