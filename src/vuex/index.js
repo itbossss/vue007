@@ -11,6 +11,9 @@ const mutations = {
         state.tabList.forEach((item, index) => {
             item['to'] = val[index]
         })
+    },
+    ADDNEWLIST(state, val) {
+        state.list = val
     }
 }
 const state = {

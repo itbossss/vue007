@@ -5,6 +5,11 @@ import "./assets/fonts/iconfont.css"
 import store from './vuex/index'
 import router from './router/index'
 
+import axios from "axios";
+axios.defaults.baseURL = "https://www.escook.cn";
+
+Vue.prototype.$axios = axios
+
 
 Vue.config.productionTip = false
 

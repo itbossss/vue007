@@ -27,9 +27,7 @@ export default {
   computed: {
     ...mapState(["tabList"]),
   },
-  created() {
-    console.log(this.$store);
-  },
+
   methods: {
     clickFn(index) {
       this.isCurrent = index;

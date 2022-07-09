@@ -1,15 +1,16 @@
 <template>
   <div>
-    商品列表
+    <MyTable />
   </div>
 </template>
 
 <script>
+import MyTable from "./business/MyTable.vue";
 export default {
-
-}
+  components: {
+    MyTable,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
