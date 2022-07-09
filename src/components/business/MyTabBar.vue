@@ -1,17 +1,18 @@
 <template>
   <div class="my-tab-bar">
-    <div
-      class="tab-item"
-      :class="{ current: isCurrent == index }"
+    <router-link
+      :to="item.to"
       v-for="(item, index) in tabList"
       :key="index"
-      @click="clickFn(index)"
+      :class="{ current: isCurrent == index }"
     >
-      <!-- 图标 -->
-      <span class="iconfont" :class="item.iconText"></span>
-      <!-- 文字 -->
-      <span> {{ item.text }}</span>
-    </div>
+      <div class="tab-item" @click="clickFn(index)">
+        <!-- 图标 -->
+        <span class="iconfont" :class="item.iconText"></span>
+        <!-- 文字 -->
+        <span> {{ item.text }}</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -59,5 +60,8 @@ export default {
 
 .current {
   color: #1d7bff;
+}
+a {
+  color: black;
 }
 </style>

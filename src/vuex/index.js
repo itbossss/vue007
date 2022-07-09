@@ -3,14 +3,22 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const actions = {}
-const mutations = {}
+const actions = {
+
+}
+const mutations = {
+    ADDLIST(state, val) {
+        state.tabList.forEach((item, index) => {
+            item['to'] = val[index]
+        })
+    }
+}
 const state = {
     tabList: [
         {
             iconText: "icon-shangpinliebiao",
             text: "商品列表",
-            componentName: "MyGoodsList"
+            componentName: "MyGoodsList",
         },
         {
             iconText: "icon-sousuo",
