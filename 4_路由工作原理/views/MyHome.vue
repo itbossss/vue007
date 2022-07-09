@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h5>fax</h5>
-  </div>
+  <h4>My-Home</h4>
 </template>
 
 <script>

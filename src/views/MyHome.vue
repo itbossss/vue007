@@ -1,5 +1,5 @@
 <template>
-  <h4>My-All_contacts</h4>
+  <h4>My-Home</h4>
 </template>
 
 <script>

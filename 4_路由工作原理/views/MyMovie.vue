@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h5>Blog</h5>
-  </div>
+  <h4>My-Movie</h4>
 </template>
 
 <script>
