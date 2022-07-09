@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>我的个人资料</h3>
+    <h4>体育的主页</h4>
   </div>
 </template>
 

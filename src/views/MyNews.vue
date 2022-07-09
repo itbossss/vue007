@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>我的分类</h3>
+    <h3>我的新闻</h3>
   </div>
 </template>
 
