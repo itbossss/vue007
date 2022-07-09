@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <div>MyHome.vue</div>
+</template>
 
 <script>
 export default {}
