@@ -1,8 +1,9 @@
 <template>
   <div>
-    <router-link to="index">主页</router-link>
-    <router-link to="news">新闻</router-link>
-    <router-link to="sports">体育</router-link>
+    <router-link to="/ui_router">UI_Router</router-link>
+    <router-link to="/contacts">Contacts</router-link>
+    <router-link to="/about">About</router-link>
+    <hr />
     <div>
       <router-view></router-view>
     </div>

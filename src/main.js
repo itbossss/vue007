@@ -2,12 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 
-import Index from './views/news/Index.vue'
-import News from './views/news/News.vue'
-import Sports from './views/news/Sports.vue'
-import Sports1 from './views/news/Sports1.vue'
-import Sports2 from './views/news/Sports2.vue'
-import Sports3 from './views/news/Sports3.vue'
+import UI_Router from './views/3router/UI_Router.vue'
+import Contacts from './views/3router/Contacts.vue'
+import About from './views/3router/About.vue'
+//二级路由
+import Allcontacts from './views/3router/3router-2/Allcontacts.vue'
+import Alice from './views/3router/3router-2/Alice.vue'
+import Bob from './views/3router/3router-2/Bob.vue'
+//三级路由
+import Blog from './views/3router/3router-2/3router-3/Blog.vue'
+import Fax from './views/3router/3router-2/3router-3/Fax.vue'
 
 let routerPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
@@ -19,30 +23,48 @@ Vue.config.productionTip = false
 const router = new VueRouter({
   routes: [
     {
-      path: '/sports',
-      component: Sports,
+      path: '/',
+      redirect: '/ui_router'
+    },
+    {
+      path: '/ui_router',
+      component: UI_Router
+    },
+    {
+      path: '/contacts',
+      component: Contacts,
       children: [
         {
-          path: 'sports1',
-          component: Sports1
+          path: 'allcontacts',
+          component: Allcontacts,
+          name: 'Allcontacts'
         },
         {
-          path: 'sports2',
-          component: Sports2
+          path: 'alice',
+          component: Alice,
+          name: 'Alice'
+
         },
         {
-          path: 'sports3',
-          component: Sports3
+          path: 'bob',
+          component: Bob,
+          name: 'Bob',
+          children: [
+            {
+              path: 'blog',
+              component: Blog
+            },
+            {
+              path: 'fax',
+              component: Fax
+            },
+          ]
         },
       ]
     },
     {
-      path: '/news',
-      component: News
-    },
-    {
-      path: '/index',
-      component: Index
+      path: '/about',
+      component: About
     },
   ]
 })
